@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  fastapi:
+    image: fastapi
+    command: uvicorn src.main:app --host 0.0.0.0 --port 9090 --reload
+    ports:
+      - 9090:9090
+    volumes:
+      - ./src:/code/src
